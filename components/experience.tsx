@@ -16,8 +16,8 @@ export default function Experience() {
   const { theme } = useTheme()
 
   return (
-    <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>Experience</SectionHeading>
+    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+      <SectionHeading>My experience</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
@@ -30,6 +30,7 @@ export default function Experience() {
                 textAlign: 'left',
                 padding: '1.3rem 2rem',
               }}
+              visible={true}
               contentArrowStyle={{
                 borderRight:
                   theme === 'light'
@@ -43,7 +44,6 @@ export default function Experience() {
                   theme === 'light' ? 'white' : 'rgba(255, 255, 255, 0.15)',
                 fontSize: '1.5rem',
               }}
-              visible={true}
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>
               <p className="font-normal !mt-0">{item.location}</p>
